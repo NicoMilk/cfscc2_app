@@ -8,6 +8,7 @@ class App extends React.Component {
   };
 
   async componentDidMount() {
+    // test connexion
     const events = await EventApi.getEvents();
     const blogposts = await BlogpostApi.getBlogposts();
     if (events && blogposts) {
@@ -24,7 +25,7 @@ class App extends React.Component {
     return (
       <div>
         {this.state.connected ? (
-          <h1>Connected !</h1>
+          <h6>Connected !</h6>
         ) : (
           <h1>Not yet connected...</h1>
         )}
