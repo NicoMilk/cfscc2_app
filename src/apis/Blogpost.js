@@ -1,6 +1,6 @@
 import Api from './Api';
 
-export default {
+const BlogPostApi = {
   postBlogpost(payload) {
     return Api().post('/blogposts/', payload);
   },
@@ -17,3 +17,5 @@ export default {
     return Api().delete('/blogposts/' + payload.blogpostId);
   },
 };
+
+export default BlogPostApi;
